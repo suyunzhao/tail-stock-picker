@@ -1,0 +1,53 @@
+class AppConstants {
+  // 筛选条件常量
+  static const double minGain = 3.0;     // 最小涨幅
+  static const double maxGain = 5.0;     // 最大涨幅
+  static const double minVolumeRatio = 1.0; // 最小量比
+  static const double minTurnoverRate = 5.0;   // 最小换手率%
+  static const double maxTurnoverRate = 10.0;  // 最大换手率%
+  static const double minMarketCap = 50.0;     // 最小流通市值(亿)
+  static const double maxMarketCap = 200.0;    // 最大流通市值(亿)
+  
+  // 分析权重
+  static const double baseConditionWeight = 0.4;  // 基础条件权重
+  static const double technicalWeight = 0.6;      // 技术分析权重
+  
+  // 定时任务配置
+  static const int analysisStartHour = 14;    // 开始分析小时
+  static const int analysisStartMinute = 25;  // 开始分析分钟
+  static const int analysisEndHour = 14;      // 结束分析小时  
+  static const int analysisEndMinute = 35;    // 结束分析分钟
+
+  // 股票数据更新间隔（毫秒）
+  static const int dataUpdateInterval = 60000; // 1分钟
+
+  // 推荐等级阈值
+  static const double strongRecommendThreshold = 85.0;
+  static const double recommendThreshold = 70.0;
+  static const double cautiousThreshold = 60.0;
+
+  // 仓位配置
+  static const double maxPositionPercent = 0.25; // 单只股票最大仓位
+  static const double minPositionPercent = 0.10; // 单只股票最小仓位
+
+  // 止损比例
+  static const double stopLossPercent = 0.05; // 5%止损
+
+  // API配置
+  static const int apiTimeoutSeconds = 10;
+  static const int maxRetryAttempts = 3;
+
+  // 默认股票列表
+  static const List<String> defaultStockCodes = [
+    'sz000858', // 五粮液
+    'sh600036', // 招商银行
+    'sz000001', // 平安银行
+    'sh601318', // 中国平安
+    'sz000002', // 万科A
+    'sh600519', // 贵州茅台
+    'sz000651', // 格力电器
+    'sh600887', // 伊利股份
+    'sz000333', // 美的集团
+    'sh601166', // 兴业银行
+  ];
+}
